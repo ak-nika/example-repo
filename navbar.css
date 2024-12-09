@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  scroll-behavior: smooth; /* Adds smooth scrolling */
+  scroll-margin-top: 50px; /*  Adds margin to the top of the scrollable area */
+}
+body {
+  background-color: #333333;
+}
+.nav1 {
+  background-color: #000000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  /* Side bar */
+  /* flex-direction: column;
+  width: 100px;
+  height: calc(
+    100vh - 20px
+  ); calc is used to calculate the height or width by adding or subtracting values 
+  position: fixed;
+  top: 0; */
+  position: sticky;
+  top: 0;
+}
+.nav1 div:last-child {
+  display: flex;
+  gap: 10px;
+  /* Side bar */
+  /* flex-direction: column; */
+}
+.nav1 a {
+  text-decoration: none;
+}
+/* Dropdown with Simple Navbar */
+.nav1 .dropdown {
+  flex-direction: column;
+  position: relative;
+}
+.nav1 .dropdown div {
+  position: absolute;
+  top: 20px;
+  display: none;
+  flex-direction: column;
+  background-color: navy;
+  padding: 10px;
+}
+.nav1 .dropdown:hover div {
+  display: flex;
+}
+
+.nav2 {
+  background-color: aliceblue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+
+  /* Side bar */
+  /* flex-direction: column;
+  position: fixed;
+  top: 0;
+  width: 100px;
+  height: calc(100vh - 20px); */
+}
+.nav2 div,
+.nav2 a {
+  color: #000000;
+  text-decoration: none;
+}
+.nav2 ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  /* Side bar */
+  /* flex-direction: column; */
+}
+.nav2 .dropdown {
+  position: relative;
+}
+.nav2 .dropdown ul {
+  /* height: 0; */
+  position: absolute;
+  left: 500px;
+  flex-direction: column;
+  background-color: white;
+  /* padding: 0; */
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+.nav2 .dropdown a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav2 .dropdown:focus-within ul {
+  left: 0px;
+}
+/* .nav2 .dropdown li {
+  visibility: hidden;
+} */
+/* .nav2 .dropdown:hover ul {
+  height: fit-content;
+  padding: 10px;
+}
+.nav2 .dropdown:hover li {
+  visibility: visible;
+} */
+
+/* Side bar */
+/* section {
+  margin-left: 150px;
+} */
+section h1 {
+  text-align: center;
+  margin: 10px 0;
+}
